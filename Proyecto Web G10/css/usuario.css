@@ -1,5 +1,89 @@
-    
-img {
-    width: 60px;
-    height: 60px;
+/* Estilos generales */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Estilos para el header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid black;
+    padding: 20px;
+  }
+  
+  header img {
+    width: 200px;
+    height: auto;
+  }
+  
+  header img:last-child {
+    margin-left: auto;
+  }
+  
+  /* Estilos para la sección Huertos */
+  
+  .Huertos {
+    background-color: #E9E8E4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .Título {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .Título h2 {
+    font-size: 30px;
+  }
+  
+  /* Estilos para los botones */
+  
+  button {
+    width: 388px;
+    height: 80px;
+    border: none;
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    font-family: 'Montserrat Medium', sans-serif; /* Tipografía Montserrat Medium */
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Separación entre botones */
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background-color: #C5CFDB;
+  }
+  
+  button img {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Estilos para el footer */
+  
+  footer {
+    background-color: #2B463C;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
   }
