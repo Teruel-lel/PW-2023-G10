@@ -1,0 +1,174 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color:inherit;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --txt-color: #1E1E1E;
+    --verde-oscuro: #2B463C;
+    --verde-intermedio: #688F4E;
+    --verde-clarito: #B1D182;
+    --blanco-roto:#E9E8E4;
+    --blanco-recuadros: #fafafa;
+}
+h1{
+    margin-left: 5rem;
+    font-size: 25px;
+    font-weight: 500;
+}
+h2{
+    margin-left: 2rem;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+p{
+    font-size: 17px;
+    font-weight: 400;
+    background-color: transparent;
+}
+ 
+section{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background-color: var(--blanco-roto);
+}
+
+#contenedorNombreHuerto{
+    border: 2px solid red;
+    width: 100%;
+    height: 10vh;
+    background: var(--blanco-roto);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 5vh;
+}
+#contenedorNombreHuerto img{
+    width: 30px;
+    height: 30px;
+    margin-right: 3rem;
+}
+
+#contenedorAvisos{
+    border: 2px solid red;
+    width: 100%;
+    height: 10vh;
+    background: var(--blanco-roto);
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    padding-left: 5vh;
+}
+
+#contenedorAvisos img{
+    width: 50px;
+    height: 50px;
+    margin-left: 2rem;
+}
+#contenedorAvisos h3{
+    margin-left: 2rem;
+}
+#informacion-sensores{
+    display: flex;
+    flex-direction: column;
+}
+#registros{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+}
+
+.medicion-y-foto{
+    border: 2px solid yellow;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.medicion-y-foto img{
+    width: 75px;
+    height: 75px;
+}
+.texto{
+    margin-left: 1rem;
+}
+#grafica{
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#imagen-grafica{
+    margin-top: 2rem;
+    width: 200px;
+    height: 200px;
+    border: 2px solid green;
+}
+
+#recuadro-botones{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.botones{
+    width: 50px;
+    height: 50px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blanco-recuadros);
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+}
+.botones img{
+    width: 30px;
+    height: 30px;
+}
+
+
+footer{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco-roto);
+}
+@media screen and (min-width: 900px) {
+    #contenedorAvisos{
+        margin-bottom: 3rem;
+    }
+    #informacion-sensores{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #registros{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    #grafica{
+        margin-bottom: 2rem;
+    }
+}

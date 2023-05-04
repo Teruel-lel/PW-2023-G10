@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="css/contactanos.css">
+    <link rel="stylesheet" href="css/main-menu.css">
+</head>
+<body>
+
+    <header>
+        <nav id="main-menu" class="activo" role="banner">
+            <a href="#" id="logo">Logo</a>
+            <ul>
+                <li><a href="#">Página principal</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Quienes somos</a></li>
+                <li><a href="#">Iniciar Sesión</a></li>
+            </ul>
+            <div class="hamburguesa">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+
+        <div id="contenedor-recuadros">
+            <h2>Contáctanos</h2>
+            <form>
+                <label for="nombre"><h3> Nombre y apellidos* </h3></label>
+                <input type="text" id="nombre" class="recuadros" required>
+                
+                <label for="email"><h3>Correo electrónico*</h3> </label>
+                <input type="email" id="email" class="recuadros" maxlength="50" required>
+
+                <h3>Motivo</h3>
+                <select class="recuadros">
+                    <option>Contratar nuestro servicio</option>
+                    <option>Cambiar contraseña</option>
+                    <option>Dudas</option>
+                </select>
+
+                <label for="comentario"><h3>Comentario</h3></label>
+                <textarea id="comentario" class="recuadros"></textarea>
+                
+                <input type="submit" id="boton-enviar">
+            </form>
+
+            <dialog id="overlay">
+                <h3>Su petición ha sido enviada ¡Pronto le contestaremos!</h3>
+                <br>
+                <button id="enviar">Aceptar</button>
+                <button id="cancelar">Cancelar</button>
+            </dialog>
+
+        </div>
+
+        <img src="images/Planta-contactanos.png" alt="planta">
+
+    </section>
+    <footer>
+        <p>Todos los derechos reservados GTI - 2023</p>
+    </footer>
+
+    <script src="js/main-menu.js"></script>
+    <script>
+        document.querySelector("form").addEventListener(
+            'submit',
+            (event)=>{
+    
+                const input = document.getElementById("nombre")
+                if(input.value.length > 20 || input.value.length < 6 ){
+                    //console.log(input.value)
+                    event.preventDefault();
+                    input.setCustomValidity("Deben ser más de 6 y menos de 20 caracteres");
+                    input.reportValidity()
+                    popup.showModal();
+                }
+            }
+        )
+    
+        document.getElementById("nombre").addEventListener("keydown",
+            (event) => {
+            console.log(event.target);
+            event.target.setCustomValidity("");
+            event.target.reportValidity();
+        })
+
+
+
+
+        const boton= document.getElementById('boton-enviar');
+        const enviar= document.getElementById('enviar');
+        const cancelar= document.getElementById('cancelar');
+
+        const popup = document.querySelector("dialog");
+
+        function cerrar(){
+            popup.close();
+        }
+
+        enviar.addEventListener('click',cerrar);
+        cancelar.addEventListener('click',cerrar);
+ 
+    </script>
+</body>
+</html>
