@@ -10,20 +10,22 @@
 <body>
     <div class="contenedor">
         <header>
-           <a href="#"><img src="images/GTI.svg" alt="Logo página"></a>
+           <a href="#"><img class=logo src="images/GTI.svg" alt="Logo página"></a>
 
-           <a href=#><img src="images/LogOutBueno.svg" alt="Logout"></a>
+           <a href="#" class="logout-link"><img class="logout" src="images/LogOutBueno.svg" alt="Logout">Cerrar sesión</a>
         </header>
+        <div class="Título">
+            <h2>¡Hola usuario!</h2>
+        </div>
         <div class="Huertos">
-            <article class="Título">
-                <h1>¡Bienvenido usuario!</h1>
-            </article>
-            <article class="Tomates">
-                <button><img src="images/Peligro.svg" alt="Peligro">Tomates</button>
-            </article>
-            <article class="Girasoles">
-                <button><img src="images/Correcto.png" alt="Peligro">Girasoles</button>
-            </article>
+            <div class="Botones">
+            <div class="Tomates">
+                <button><img src="images/Peligro.svg" alt="Peligro"><div class="Ajustar">Tomates</div></button>
+            </div>
+            <div class="Girasoles">
+                <button><img src="images/Correcto.png" alt="Peligro"><div class="Ajustar">Girasoles</div></button>
+            </div>
+            </div>
         </div>
       <footer>
           <p>Todos los derechos reservados - GTI 2023</p>

@@ -1,82 +1,123 @@
-/* Estilos generales */
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   
-  body {
-    font-family: sans-serif;
-    font-size: 16px;
+  @font-face {
+    font-family: 'Montserrat Medium';
+    src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
   }
+  
+  body {
+    font-family: 'Montserrat Medium', sans-serif;
+  }
+  
   
   /* Estilos para el header */
   header {
+    height:80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid gray;
     padding: 20px;
   }
-  
-  header img {
-    width: 200px;
-    height: auto;
+  header a {
+    color: black;
+    text-decoration: none;
   }
+  
+  .logo{
+    width: 140px;
+    height: 80px;
+  }
+  .logout{
+    width: 33px;
+    height: 33px;
+  }
+  
+  
+  .logout{
+    display: none;
+  }
+  
   
   header img:last-child {
     margin-left: auto;
   }
   
-  /* Estilos para la sección Huertos */
+   /* Estilos para la sección Huertos */
+   .Huertos {
+      background-color: #E9E8E4;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Cambiado de "flex-start" a "center" */
+      justify-content: center;
+      height: 68vh;
+      padding: 20px;
+    }
   
-  .Huertos {
-    background-color: #E9E8E4;
+    .Título {
+      height: 89px;
+      display: flex;
+      align-items: center; /* Centrar título en el subheader */
+      text-align: start;
+      background-color: #E9E8E4;
+      border-bottom: 1px solid gray;
+  
+      
+    }
+  
+    .Título h2 {
+      font-size: 30px;
+      margin-left: 170px;
+   
+      
+    }
+  
+  /* Estilos para los botones */
+  .Botones {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-  }
-  
-  .Título {
-    margin-bottom: 40px;
+    margin-top: 50px;
     text-align: center;
   }
   
-  .Título h2 {
-    font-size: 30px;
-  }
-  
-  /* Estilos para los botones */
-  
   button {
-    width: 388px;
+    width: 600px;
     height: 80px;
     border: none;
-    background-color: #FFFFFF; /* Fondo blanco */
-    color: #000000; /* Texto negro */
-    font-family: 'Montserrat Medium', sans-serif; /* Tipografía Montserrat Medium */
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: 'Montserrat Medium', sans-serif;
     font-size: 24px;
     padding: 20px;
     border-radius: 30px;
-    display: flex;
+    display: inline-flex; /* Cambiado de "flex" a "inline-flex" */
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px; /* Separación entre botones */
+    margin-bottom: 58px;
+    
+  }
+  
+  button img {
+    margin-right:200px; /* Ajustar el espacio entre la imagen y el texto */
+    width: 50px;
+    height: 50px;
+    
+  }
+  .Ajustar {
+    text-align: center;
+    margin-right: 200px;
   }
   
   button:hover {
     cursor: pointer;
     background-color: #C5CFDB;
-  }
-  
-  button img {
-    margin-right: 20px;
-    width: 40px;
-    height: 40px;
   }
   
   /* Estilos para el footer */
@@ -86,4 +127,52 @@
     color: #FFFFFF;
     text-align: center;
     padding: 20px;
+    height:100%;
+  }
+  
+  /* Estilos para móvil */
+  @media only screen and (max-width: 600px) {
+  
+  
+  /* Ajustar posición de imagen de logout */
+  header img:last-child {
+    margin-left: 0;
+    margin-right: 20px;
+    
+  }
+  .logout-link {
+      display: inline-block;
+      background-image: url('images/LogOutBueno.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 33px;
+      height: 33px;
+      text-indent: -9999px;
+    }
+  /* Ajustar título */
+    .Título {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .Título h2 {
+      margin: 0;
+    }
+  /* Ajustar tamaño de botones */
+  button {
+    max-width: 400px;
+  }
+  button img {
+    margin-right:100px; /* Ajustar el espacio entre la imagen y el texto */
+    
+    
+  }
+  .Ajustar {
+   
+    margin-right: 100px;
+  }
+  
+  
   }
