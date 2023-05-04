@@ -21,7 +21,10 @@ h2{
     font-size: 25px;
     font-weight: 500;
 }
-
+h3{
+    font-size: 20px;
+    font-weight: 500;
+}
 p{
     font-size: 17px;
     font-weight: 400;
@@ -30,7 +33,7 @@ p{
  
 section{
     width: 100%;
-    height: auto;
+    height: 100vh;
     flex-direction: column;
     background-color: var(--blanco-roto);
 }
@@ -63,6 +66,7 @@ section{
     outline: none;
 }
 .iconosBarraBusqueda img{
+    cursor: pointer;
     width: 40px;
     height: 40px;
 }
@@ -77,6 +81,7 @@ section{
 }
 
 .botonesItems{
+    cursor: pointer;
     width: 40px;
     height: 40px;
     border: none;
@@ -90,6 +95,7 @@ section{
 }
 
 .contenedor-usuarios{
+    cursor: pointer;
     margin-bottom: 1rem;
     margin-left: 5vh;
     margin-right: 5vh;
@@ -129,6 +135,7 @@ section{
     margin-left: 2rem;
 }
 #paginas img{
+    cursor: pointer;
     width: 40px;
     height: 40px;
 }
@@ -139,8 +146,113 @@ section{
     height: 60px;
 }
 .papelera{
+    cursor: pointer;
     width: 40px;
     height: 40px;
+}
+
+#popupNuevoUsuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: none;
+    padding:2rem 2rem 2rem 2rem;
+    border-radius: 30px;
+    width: 350px;
+}
+#nombre{
+    border: none;
+    height: 40px;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 2px 2px 2px 2px;
+    border-radius: 7px;
+    background-color:var(--blanco-recuadros);
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.35);
+    font-family: "Montserrat", sans-serif;
+    color: var(--txt-color);
+    text-align: left;
+}
+#email{
+    margin-top: 1rem;
+    border: none;
+    height: 40px;
+    width: 100%;
+    padding: 2px 2px 2px 2px;
+    border-radius: 7px;
+    background-color:var(--blanco-recuadros);
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.35);
+    font-family: "Montserrat", sans-serif;
+    color: var(--txt-color);
+    text-align: left;
+}
+#botones-popUp{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+#cancelarNuevo{
+    cursor: pointer;
+    width: 100px;
+    margin-right: 1rem;
+    height: 45px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 7px;
+    background-color:var(--blanco-roto) ;
+    color:var(--verde-oscuro);
+    font-size: 17px;
+    border: none;
+}
+#boton-aceptar{
+    cursor: pointer;
+    margin-left: 1rem;
+    width: 100px;
+    height: 45px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 7px;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco-roto);
+    font-size: 17px;
+    border: none;
+}
+#popupEliminarUsuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: none;
+    padding:2rem 2rem 2rem 2rem;
+    border-radius: 30px;
+    width: 350px;
+}
+#aceptar-eliminar{
+    cursor: pointer;
+    width: 100px;
+    margin-right: 1rem;
+    height: 45px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 7px;
+    background-color:var(--blanco-roto);
+    color:var(--txt-color);
+    font-size: 17px;
+    border: none;
+}
+#cancelarEliminar{
+    cursor: pointer;
+    margin-left: 1rem;
+    width: 100px;
+    height: 45px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 7px;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco-recuadros);
+    font-size: 17px;
+    border: none;
 }
 
 footer{
