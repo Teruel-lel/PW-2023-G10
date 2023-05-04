@@ -1,9 +1,22 @@
+let idBorrar = 0;
 let usuarios = [];
 let usuariosPorPagina = 6;
 let pagina = 1;
-let ultimaPagina
-let contenedor = document.getElementById("usuarios");
+let ultimaPagina;
 let usuariosLength = 0;
+
+let contenedor = document.getElementById("usuarios");
+
+/* POPUP NUEVO USUARIO */
+const nuevoPopUp= document.getElementById('nuevoUsuario');
+const cancelarNuevo= document.getElementById('cancelarNuevo');
+const popupNuevo = document.getElementById("popupNuevoUsuario");
+popupNuevo.style.display="none";
+
+/* POPUP ELIMINAR USUARIO */
+const cancelarEliminar= document.getElementById('cancelarEliminar');
+const popupEliminar = document.getElementById("popupEliminarUsuario");
+popupEliminar.style.display="none";
 
 (async () => {
     if(localStorage.getItem("usuarios") === null){
@@ -29,7 +42,7 @@ let usuariosLength = 0;
     cambiarPagina("inicio");
 })();
 
-function crearUsuario(nombreUsuario){
+function crearUsuario(usuario){
     const usuarios = document.getElementById("usuarios");
 
     const contenedorUsuarios = document.createElement("div");
@@ -39,6 +52,7 @@ function crearUsuario(nombreUsuario){
     const div2 = document.createElement("div");
 
     div1.classList.add("iconos");
+    div1.setAttribute("onclick", "redireccion()");
     div2.classList.add("icono-papelera");
 
     const img1 = document.createElement("img");
@@ -51,7 +65,9 @@ function crearUsuario(nombreUsuario){
     img2.setAttribute("src", "images/icono-borrar.svg");
     img2.setAttribute("alt", "borrar");
     img2.classList.add("papelera");
-    p.textContent = nombreUsuario;
+    img2.setAttribute("onclick","borrarUsuario("+usuario.id+")");
+    p.classList.add("nombreUsuario");
+    p.textContent = usuario.nombre;
 
     div1.appendChild(img1);
     div1.appendChild(p);
@@ -83,8 +99,7 @@ function cambiarPagina(metodo){
     contenedor.innerHTML = "";
     let inicio = (pagina - 1) * usuariosPorPagina;
     for(let i = inicio; i<inicio + usuariosPorPagina; i++){
-        let usuario = usuarios[i];
-        if(usuario) crearUsuario(usuario.nombre);
+        if(usuarios[i]) crearUsuario(usuarios[i]);
     }
 
     const textoPaginas = document.getElementById("textoPaginas");
@@ -132,22 +147,18 @@ function redimension(){
     }
 }
 
-/* POP UP */
+/* ---------------------  POP UP NUEVO USUARIO --------------------- */
 
-const abrirPopUp= document.getElementById('nuevoUsuario');
-const cancelar= document.getElementById('cancelar');
-const popup = document.querySelector("dialog");
-
-abrirPopUp.addEventListener('click', () => {
-    popup.showModal();
+nuevoPopUp.addEventListener('click', () => {
+    popupNuevo.showModal();
+    popupNuevo.style.display="block";
 })
+cancelarNuevo.addEventListener('click', () => {
+    popupNuevo.close();
+    popupNuevo.style.display="none";
+});
 
-function cerrar(){
-    popup.close();
-}
-cancelar.addEventListener('click',cerrar);
-
-
+/* ----------------------------        ----------------------------- */
 
 function crearNuevoUsuario(){
     const nombre = document.getElementById("nombre");
@@ -165,3 +176,63 @@ function crearNuevoUsuario(){
 
     localStorage.setItem("usuarios",newUsuarios);
 }
+
+/* ---------------------  POP UP ELIMINAR USUARIO --------------------- */
+
+cancelarEliminar.addEventListener("click", () => {
+    popupEliminar.close();
+    popupEliminar.style.display="none";
+});
+
+/* ----------------------------        ----------------------------- */
+function borrarUsuario(id){
+    console.log(id);
+    idBorrar = id;
+    popupEliminar.showModal();
+    popupEliminar.style.display="block";
+}
+function aceptarEliminar(){
+    let cordArray;
+    for(let i = 0; i < usuariosLength; i++){
+        if(usuarios[i].id === idBorrar){
+            cordArray = i;
+        }
+    }
+    usuarios.splice(cordArray, 1);
+    const newUsuarios = JSON.stringify(usuarios);
+    localStorage.setItem("usuarios",newUsuarios);
+}
+
+
+function redireccion(){
+    location.href ="landing.html";
+}
+
+function buscarUsuario(){
+    let input = document.getElementById("barraBusqueda").value;
+    input = input.toLowerCase();
+
+    let inicio = (pagina - 1) * usuariosPorPagina;
+    let usuariosCumplenBusqueda = [];
+
+    for (i = 0; i < usuariosLength; i++) {
+        if (!usuarios[i].nombre.toLowerCase().includes(input)) {
+        }
+        else {
+            usuariosCumplenBusqueda.push(usuarios[i]);
+        }
+    }
+
+    ultimaPagina = Math.ceil(usuariosCumplenBusqueda.length / usuariosPorPagina);
+    mostrarOcultarIconos();
+
+    contenedor.innerHTML = "";
+    for(let i = inicio; i<inicio + usuariosPorPagina; i++){
+        if(usuariosCumplenBusqueda[i]) crearUsuario(usuariosCumplenBusqueda[i]);
+    }
+    const textoPaginas = document.getElementById("textoPaginas");
+    textoPaginas.textContent = "Página "+pagina+" de "+ultimaPagina;
+}
+
+
+
