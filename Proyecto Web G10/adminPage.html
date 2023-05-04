@@ -16,106 +16,41 @@
         <div id="contenedorTextoAdmin">
             <h2>Administrador</h2>
         </div>
+
         <form id="contenedorBarraBusqueda">
             <img class="iconosBarraBusqueda" src="images/icono-buscar.svg" alt="buscara">
             <input id="barraBusqueda" type="text" placeholder="Buscar usuario" id="usuario" required>
             <img class="iconosBarraBusqueda" src="images/icono-cancelar.svg" alt="cancelar">
         </form>
+
         <div id="contenedorItems">
-                <button id="botonesItems" type="button">+</button>
-            </div>
+                <button class="botonesItems" id="nuevoUsuario" type="button">+</button>
         </div>
+
         <div id="usuarios">
-
-            <div class="contenedor-usuarios">
-
-                <div class="iconos">
-                    <img src="images/icono-usuario.svg" alt="buscar" class="bc">
-                    <p>plantaciones marcos</p>
-                </div>
-                <div class="icono-papelera">
-                    <img src="images/icono-borrar.svg" alt="borrar" class="papelera">
-                </div>
-
-            </div>
-
-            <div class="contenedor-usuarios">
-
-                <div class="iconos">
-                    <img src="images/icono-usuario.svg" alt="usuario" class="bc">
-                    <p>plantaciones marcos</p>
-                </div>
-                <div class="icono-papelera">
-                    <img src="images/icono-borrar.svg" alt="borrar" class="papelera">
-                </div>
-
-            </div>
-
-            <div class="contenedor-usuarios">
-
-                <div class="iconos">
-                    <img src="images/icono-usuario.svg" alt="usuario" class="bc">
-                    <p>plantaciones marcos</p>
-                </div>
-                <div class="icono-papelera">
-                    <img src="images/icono-borrar.svg" alt="borrar" class="papelera">
-                </div>
-
-            </div>
-
-            <div class="contenedor-usuarios">
-
-                <div class="iconos">
-                    <img src="images/icono-usuario.svg" alt="usuario" class="bc">
-                    <p>plantaciones marcos</p>
-                </div>
-                <div class="icono-papelera">
-                    <img src="images/icono-borrar.svg" alt="borrar" class="papelera">
-                </div>
-
-            </div>
-
-            
         </div>
-        <dialog>
-            <input type="text" id="nombre" placeholder="Escribe el nombre">
-            <br>
-            <button id="enviar">Enviar</button>
-            <button id="cancelar">Cancelar</button>
-        </dialog>
 
         <div id="paginas">
-            <img src="images/icono-flecha-izq.svg">
-            <p>Página 1 de 2</p>
-            <img src="images/icono-flecha-der.svg">
+            <img id="anterior" onclick="cambiarPagina('anterior')" alt="anterior" src="images/icono-flecha-izq.svg">
+            <p id="textoPaginas"></p>
+            <img id="siguiente" onclick="cambiarPagina('siguiente')" alt="siguiente" src="images/icono-flecha-der.svg">
         </div>
+
+        <dialog>
+            <form onsubmit="crearNuevoUsuario()">
+                <label for="nombre"></label><input id="nombre" name="nombre" type="text" placeholder="Nombre del cliente..." required>
+                <br>
+                <label for="email"></label><input id="email" name="email" type="email" placeholder="Email del cliente..." required>
+                <br>
+                <input type="submit">
+                <button id="cancelar" type="button">Cancelar</button>
+            </form>
+        </dialog>
     </section>
     
     <footer>
         <p>Todos los derechos reservados GTI - 2023</p>
     </footer>
-
-
-    <script>
-        const boton= document.getElementById('botonesItems');
-        const enviar= document.getElementById('enviar');
-        const cancelar= document.getElementById('cancelar');
-    
-        const popup = document.querySelector("dialog");
-        const salida = document.getElementById("salida");
-        const nombre = document.getElementById("nombre");
-    
-        boton.addEventListener('click', () => {
-            popup.showModal();
-        })
-    
-        function cerrar(){
-            popup.close(nombre.value);
-        }
-    
-        enviar.addEventListener('click',cerrar);
-        cancelar.addEventListener('click',cerrar);
-
-    </script>
 </body>
 </html>
+<script src="js/adminPage.js"></script>
