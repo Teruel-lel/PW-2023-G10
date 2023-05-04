@@ -7,17 +7,29 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/Usuario-datos.css">
-    <script src="js/datos-graficas.js"></script>
+    <link rel="stylesheet" href="css/usuario-datos2.css">
+    <link rel="stylesheet" href="css/menu-usuario.css">
+    
 </head>
 <body>
-    <section>
-        <header>
-            <a href="#"><img class=logo src="images/logoverde.png" alt="Logo página"></a>
- 
-            <a href="#" class="logout-link"><img class="logout" src="images/LogOutBueno.svg" alt="Logout">Cerrar sesión</a>
-         </header>
 
+
+    <header>
+        <a href="#"><img class=logo src="images/logoverde.png" alt="Logo página"></a>
+
+        <a href="#" class="logout-link"><img class="logout" src="images/LogOutBueno.svg" alt="Logout">Cerrar sesión</a>
+     </header>
+
+    <dialog id="popUp-cerrar-sesion">
+        <h3>¿Deseas cerrar sesión?</h3>
+        <div id="botones-menu">
+            <button id="enviar-logout">Aceptar</button>
+            <button id="cancelar-logout">Cancelar</button>
+        </div>
+    </dialog>
+
+
+    <section>
         <div id="contenedorNombreHuerto">
 
             <h2>Tomates</h2>
@@ -33,99 +45,104 @@
         </div>
 
         <h1 >Datos en los últimos 10 minutos</h1>
-        <div id="informacion-sensores">
-            
+        <div id="informacion-general">  
             <div id="registros">
 
-                <div id="resgistrosIz">
+                    <div id="resgistrosIz">
 
-                    <div class="medicion-y-foto">
-                        <img src="images/SalinidadRoja.png">
-                        <div class="texto">
-                            <h3>Salinidad</h3>
-                            <h2>76%</h2>
+                        <div class="medicion-y-foto">
+                            <img src="images/SalinidadRoja.png">
+                            <div class="texto">
+                                <h3>Salinidad</h3>
+                                <h2>76%</h2>
+                            </div>
                         </div>
+
+                        <div class="medicion-y-foto">
+                            <img src="images/PHRojo.png">
+                            <div class="texto">
+                                <h3>Ph</h3>
+                                <h2>24%</h2>
+                            </div>
+                        </div>
+
+                        <div class="medicion-y-foto">
+                            <img src="images/HumedadVerde.png">
+                            <div class="texto">
+                                <h3>Humedad</h3>
+                                <h2>76%</h2>
+                            </div>
+                        </div>
+
+                        
                     </div>
+                    <div id="registrosDer">
 
-                    <div class="medicion-y-foto">
-                        <img src="images/PHRojo.png">
-                        <div class="texto">
-                            <h3>Ph</h3>
-                            <h2>24%</h2>
+                        <div class="medicion-y-foto">
+                            <img src="images/TemperaturaVerde.png">
+                            <div class="texto">
+                                <h3>Temperatura</h3>
+                                <h2>26ºC</h2>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="medicion-y-foto">
-                        <img src="images/HumedadVerde.png">
-                        <div class="texto">
-                            <h3>Humedad</h3>
-                            <h2>76%</h2>
+                        <div class="medicion-y-foto">
+                            <img src="images/LuminosidadVerde.png">
+                            <div class="texto">
+                                <h3>Luminosidad</h3>
+                                <h2>50%</h2>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="medicion-y-foto">
-                        <img src="images/TemperaturaVerde.png">
-                        <div class="texto">
-                            <h3>Temperatura</h3>
-                            <h2>26ºC</h2>
-                        </div>
+                        
+
                     </div>
                 </div>
+<!-- ----------------------------------------------------------------------- -->
+                <div id="grafica">
 
-                <div class="registrosDer">
+                    <h3>Gráfica huerto tomates</h3>
 
-                    <div class="medicion-y-foto">
-                        <img src="images/LuminosidadVerde.png">
-                        <div class="texto">
-                            <h3>Luminosidad</h3>
-                            <h2>50%</h2>
+                    <img src="images/GraficaHumedad.png" class="graph" alt="graficas" id="GraficaHumedad">
+                    <img src="images/GraficaSalinidad.png" class="graph" alt="graficas" id="GraficaSalinidad">
+                    <img src="images/GraficaTemperatura.png" class="graph" alt="graficas" id="GraficaTemperatura">
+                    <img src="images/GraficaLuminosidad.png" class="graph" alt="graficas" id="GraficaLuminosidad">
+                    <img src="images/GraficaPH.png" class="graph" alt="graficas" id="GraficaPH">
+
+                    <div id="recuadro-botones">
+
+                        <div class="botones" id="botonhumedad" onclick="mostrarHumedad()">
+                            <img src="images/HumedadVerde.png" alt="Humedad">
+                        </div>
+
+                        <div class="botones" id="botonsalinidad" onclick="mostrarSalinidad()">
+                            <img src="images/SalinidadRoja.png" alt="Salinidad">
+                        </div>
+
+                        <div class="botones" id="botontemperatura" onclick="mostrarTemperatura()">
+                            <img src="images/TemperaturaVerde.png" alt="Temperatura">
+                        </div>
+
+                        <div class="botones" id="botonluminosidad" onclick="mostrarLuminosidad()">
+                            <img src="images/LuminosidadVerde.png" alt="Luminosidad">
+                        </div>
+
+                        <div class="botones" id="botonph" onclick="mostrarPH()">
+                            <img src="images/PHRojo.png" alt="PH">
                         </div>
                     </div>
 
-                    
-
-                </div>
             </div>
+        </div> 
+    </section>
 
-            <div id="grafica">
 
-                <h3>Gráfica huerto tomates</h3>
-
-                <img src="images/GraficaHumedad.png" class="graph" alt="graficas" id="GraficaHumedad">
-                <img src="images/GraficaSalinidad.png" class="graph" alt="graficas" id="GraficaSalinidad">
-                <img src="images/GraficaTemperatura.png" class="graph" alt="graficas" id="GraficaTemperatura">
-                <img src="images/GraficaLuminosidad.png" class="graph" alt="graficas" id="GraficaLuminosidad">
-                <img src="images/GraficaPH.png" class="graph" alt="graficas" id="GraficaPH">
-
-                <div id="recuadro-botones">
-
-                    <div class="botones" id="botonhumedad" onclick="mostrarHumedad()">
-                        <img src="images/HumedadVerde.png" alt="Humedad">
-                    </div>
-
-                    <div class="botones" id="botonsalinidad" onclick="mostrarSalinidad()">
-                        <img src="images/SalinidadRoja.png" alt="Salinidad">
-                    </div>
-
-                    <div class="botones" id="botontemperatura" onclick="mostrarTemperatura()">
-                        <img src="images/TemperaturaVerde.png" alt="Temperatura">
-                    </div>
-
-                    <div class="botones" id="botonluminosidad" onclick="mostrarLuminosidad()">
-                        <img src="images/LuminosidadVerde.png" alt="Luminosidad">
-                    </div>
-
-                    <div class="botones" id="botonph" onclick="mostrarPH()">
-                        <img src="images/PHRojo.png" alt="PH">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    
     <footer>
         <p>Todos los derechos reservados GTI - 2023</p>
     </footer>
+
+<script src="js/usuario-datos.js"></script>
+<script src="js/menu-Usuario.js"></script>
 
 </body>
 </html>

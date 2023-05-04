@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
 *{
     text-decoration: none;
     color:inherit;
@@ -6,15 +7,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-@font-face {
-    font-family: 'Montserrat Medium';
-    src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
-  }
-  body {
-    font-family: 'Montserrat Medium', sans-serif;
-  }
-  
+body{
+    font-family: 'Montserrat';
+    background-color: var(--blanco-roto);
+    color: var(--txt-color);
+}
 :root{
     --txt-color: #1E1E1E;
     --verde-oscuro: #2B463C;
@@ -23,7 +20,6 @@
     --blanco-roto:#E9E8E4;
     --blanco-recuadros: #fafafa;
 }
-
 /* Estilos para el header */
 header {
     height:80px;
@@ -57,29 +53,30 @@ header {
   header img:last-child {
     margin-left: auto;
   }
-  /*--------*/
+
 h1{
-    margin-left: 5rem;
-    font-size: 25px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 20px;
     font-weight: 500;
 }
 h2{
-    margin-left: 2rem;
-    font-size: 25px;
+    margin-left: 1rem;
+    margin-bottom:3rem;
+    font-size: 23px;
     font-weight: 500;
 }
 
 h3{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 
 p{
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
     background-color: transparent;
 }
- 
 section{
     width: 100%;
     height: auto;
@@ -89,74 +86,84 @@ section{
 
 #contenedorNombreHuerto{
     width: 100%;
-    height: 10vh;
+    height: 20vh;
     background: var(--blanco-roto);
     display: flex;
     justify-content:space-between;
     align-items: center;
-    padding-left: 5vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 #contenedorNombreHuerto img{
     width: 30px;
     height: 30px;
-    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-bottom:3rem;
 }
 
 #contenedorAvisos{
-    border: 1px solid gray;
     width: 100%;
     height: 10vh;
     background: var(--blanco-roto);
     display: flex;
     justify-content:start;
     align-items: center;
-    padding-left: 5vh;
+    padding-left: 2rem;
+    margin-top: -3rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 #contenedorAvisos img{
     width: 50px;
     height: 50px;
-    margin-left: 2rem;
 }
 #contenedorAvisos h3{
     margin-left: 2rem;
+    
 }
-#informacion-sensores{
-    margin-top:40px;
+
+#registros{
     display: flex;
-    flex-direction: column;
-    height:600px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    height: auto;
+}
+#registrosIz{
+    margin-right: 0.5rem;
 }
 
 .medicion-y-foto{
-    
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 .medicion-y-foto img{
-    width: 100px;
-    height: 100px;
-    padding: 10px;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 40px;
 }
 .texto{
     margin-left: 1rem;
 }
+
 #grafica{
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
+    padding-top: 4rem;
     padding-left: 2rem;
     padding-right: 2rem;
 }
 #grafica .graph{
-width: 400px;
-height: 400px;
-position:absolute;
-margin-top:200px;
+    width: 300px;
+    height: 300px;
+    position:absolute;
+    margin-top:200px;
 }
-
-
 
 #recuadro-botones{
     margin-top: 2rem;
@@ -166,8 +173,8 @@ margin-top:200px;
 }
 
 .botones{
-    width: 100px;
-    height: 100px;
+    width: 55px;
+    height: 55px;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     display: flex;
@@ -178,12 +185,11 @@ margin-top:200px;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
 .botones img{
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
 }
-
-
 footer{
+    margin-top: 0;
     width: 100%;
     height: 10vh;
     display: flex;
@@ -192,86 +198,53 @@ footer{
     background-color: var(--verde-oscuro);
     color: var(--blanco-roto);
 }
-@media screen and (min-width: 900px) {
 
-
-    #contenedorAvisos{
-        margin-bottom: 3rem;
+@media screen and (min-width: 950px) {
+    section{
+        height: 100vh;
     }
-    #informacion-sensores{
+    #informacion-general{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
     #registros{
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        height: 50vh;
     }
     #grafica{
-        margin-bottom: 2rem;
-        display:flex;
+        margin-top: 0;
+        height: 70vh;
     }
+    #grafica .graph{
+        margin-top:7rem;
+    }
+    #resgistrosIz{
+        margin-right: 3rem;
+    }
+    .medicion-y-foto{
+        margin-top: 2rem;
+        
+    }
+
+    
 }
 @media only screen and (max-width: 600px) {
-/* Ajustar posición de imagen de logout */
-header img:last-child {
-margin-left: 0;
-margin-right: 20px;
-}
-.logout-link {
-display: inline-block;
-background-image: url('../images/LogOutBueno.svg');
-background-repeat: no-repeat;
-background-position: center;
-background-size: contain;
-width: 33px;
-height: 33px;
-text-indent: -9999px;
-margin-top: 10px; /* Agregar un margen superior para separar los botones del logo */
-margin-left: auto; /* Mover los botones al lado derecho */
-margin-right: 0;
-}
-
-/* Alinear los botones verticalmente */
-.botones {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-#informacion-sensores {
-height: 1200px;
-}
-
-.medicion-y-foto img {
-display:flex;
-width: 70px;
-height: 70px;
-}
-
-h2 {
-margin-right: 10px;
-font-size: 18px;
-margin-bottom: 10px;
-}
-
-h3 {
-font-size: small;
-}
-
-#grafica {
-margin-bottom: 2rem;
-display: flex;
-}
-
-.botones {
-width: 60px;
-height: 60px;
-margin-top: 10px;
-}
-
-.botones img {
-width: 40px;
-height: 40px;
-}
+    /* Ajustar posición de imagen de logout */
+    header img:last-child {
+    margin-left: 0;
+    margin-right: 20px;
+    }
+    .logout-link {
+    display: inline-block;
+    background-image: url('../images/LogOutBueno.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 33px;
+    height: 33px;
+    text-indent: -9999px;
+    margin-top: 10px; /* Agregar un margen superior para separar los botones del logo */
+    margin-left: auto; /* Mover los botones al lado derecho */
+    margin-right: 0;
+    }
 }
