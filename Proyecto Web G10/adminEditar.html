@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GTI - Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/adminEditar.css">
+</head>
+<body>
+    <section>
+        <div>Header</div>
+
+        <div id="contenedorTextoAdmin">
+            <h2>Administrador - Editar</h2>
+        </div>
+
+        <div id="contenedor-personalinfo">
+            <img src="images/icono-usuario.svg" alt="icono usuario" id="foto-perfil">
+            
+            <div id="texto-personales">
+
+                <div class="texto-personalinfo">
+                    <h3>Usuario: </h3>
+                    <p>Juliaannn77</p>
+                </div>
+                <div class="texto-personalinfo">
+                    <h3>Email: </h3>
+                    <p>Julian@gmail.com</p>
+                </div>
+                <div class="texto-personalinfo">
+                    <h3>Telefono: </h3>
+                    <p>+34675834123</p>
+                </div>
+
+            </div>
+            <img src="images/icono-editar.svg" alt="editar" id="editar-perfil">
+
+        </div>
+
+        <form id="contenedorBarraBusqueda">
+            <img class="iconosBarraBusqueda" src="images/icono-buscar.svg" alt="buscar">
+            <input id="barraBusqueda" type="text" placeholder="Buscar usuario" id="usuario" required>
+            <img class="iconosBarraBusqueda" src="images/icono-cancelar.svg" alt="cancelar">
+        </form>
+
+        </div>
+        <div id="campos">
+
+            <div class="contenedor-campos">
+
+                <div class="nombre-huerto">
+                    <h3>Huerto 1</h3>
+                </div>
+                <div class="iconos">
+                    <img src="images/icono-editar.svg" alt="editar">
+                    <img src="images/icono-borrar.svg" alt="borrar" >
+                </div>
+
+            </div>
+            <div class="contenedor-campos">
+
+                <div class="nombre-huerto">
+                    <h3>Huerto 2</h3>
+                </div>
+                <div class="iconos">
+                    <img src="images/icono-editar.svg" alt="editar">
+                    <img src="images/icono-borrar.svg" alt="borrar" >
+                </div>
+
+            </div>
+            <div class="contenedor-campos">
+
+                <div class="nombre-huerto">
+                    <h3>Huerto 3</h3>
+                </div>
+                <div class="iconos">
+                    <img src="images/icono-editar.svg" alt="editar">
+                    <img src="images/icono-borrar.svg" alt="borrar" >
+                </div>
+
+            </div>
+        </div>
+
+        <div class="contenedor-campos2">
+            <div>
+              <image  src="images/icono-añadir.svg" alt="Icono3">
+            </div>
+        </div>
+
+        <div id="paginas">
+            <img src="images/icono-flecha-izq.svg">
+            <p>Página 1 de 2</p>
+            <img src="images/icono-flecha-der.svg">
+        </div>
+    </section>
+    
+    <footer>
+        <p>Todos los derechos reservados GTI - 2023</p>
+    </footer>
+
+    <script>
+        const boton= document.getElementById('boton');
+        const enviar= document.getElementById('enviar');
+        const cancelar= document.getElementById('cancelar');
+    
+        const popup = document.querySelector("dialog");
+        const salida = document.getElementById("salida");
+        const nombre = document.getElementById("nombre");
+    
+        salida.style.display = "none";
+    
+        boton.addEventListener('click', () => {
+            nombre.value = '';
+            popup.showModal();
+        })
+    
+        function cerrar(){
+            popup.close(nombre.value);
+        }
+    
+        enviar.addEventListener('click',cerrar);
+        cancelar.addEventListener('click',cerrar);
+    
+        popup.addEventListener('close', () => {
+            //console.log('Valor devuelto:', popup.returnValue);
+            if(popup.returnValue != ""){
+                salida.style.display = "block";
+                salida.innerText = "Tu nombre es " + popup.returnValue;
+            }
+        })
+    </script>    
+</body>
+</html>

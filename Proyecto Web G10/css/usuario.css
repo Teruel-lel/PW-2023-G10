@@ -31,7 +31,7 @@
   
   .logo{
     width: 140px;
-    height: 80px;
+    height: 140px;
   }
   .logout{
     width: 33px;
@@ -142,7 +142,7 @@
   }
   .logout-link {
       display: inline-block;
-      background-image: url('images/LogOutBueno.svg');
+      background-image: url('../images/LogOutBueno.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
