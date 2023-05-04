@@ -9,7 +9,7 @@ var estadoPH = 'pulsado'
 function mostrarHumedad() {
     if(estadoHumedad =='sinpulsar') {
         estadoHumedad = 'pulsado'
-        document.getElementById('botonhumedad').style.background = '#E7E7E7'
+        document.getElementById('botonhumedad').style.background = '#AAAAAA'
         document.getElementById('GraficaHumedad').style.visibility = 'visible';
     }
     else if(estadoHumedad == 'pulsado') {
@@ -22,7 +22,7 @@ function mostrarHumedad() {
 function mostrarSalinidad() {
     if(estadoSalinidad =='sinpulsar') {
         estadoSalinidad = 'pulsado'
-        document.getElementById('botonsalinidad').style.background = '#E7E7E7'
+        document.getElementById('botonsalinidad').style.background = '#AAAAAA'
         document.getElementById('GraficaSalinidad').style.visibility = 'visible';
     }
     else if(estadoSalinidad == 'pulsado') {
@@ -35,7 +35,7 @@ function mostrarSalinidad() {
 function mostrarTemperatura() {
     if(estadoTemperatura =='sinpulsar') {
         estadoTemperatura = 'pulsado'
-        document.getElementById('botontemperatura').style.background = '#E7E7E7'
+        document.getElementById('botontemperatura').style.background = '#AAAAAA'
         document.getElementById('GraficaTemperatura').style.visibility = 'visible';
     }
     else if(estadoTemperatura == 'pulsado') {
@@ -49,7 +49,7 @@ function mostrarTemperatura() {
 function mostrarLuminosidad() {
     if(estadoLuminosidad =='sinpulsar') {
         estadoLuminosidad = 'pulsado'
-        document.getElementById('botonluminosidad').style.background = '#E7E7E7'
+        document.getElementById('botonluminosidad').style.background = '#AAAAAA'
         document.getElementById('GraficaLuminosidad').style.visibility = 'visible';
     }
     else if(estadoLuminosidad == 'pulsado') {
@@ -63,7 +63,7 @@ function mostrarLuminosidad() {
 function mostrarPH(){
     if(estadoPH =='sinpulsar') {
         estadoPH = 'pulsado'
-        document.getElementById('botonph').style.background = '#E7E7E7'
+        document.getElementById('botonph').style.background = '#AAAAAA'
         document.getElementById('GraficaPH').style.visibility = 'visible';
     }
     else if(estadoPH == 'pulsado') {
