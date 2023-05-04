@@ -76,7 +76,7 @@ section{
     margin-right: 5vh;
 }
 
-#botonesItems{
+.botonesItems{
     width: 40px;
     height: 40px;
     border: none;
@@ -161,4 +161,8 @@ footer{
         height: 30px;
         margin-left: 1rem;
     }
+}
+
+.noVisible{
+    visibility: hidden;
 }
