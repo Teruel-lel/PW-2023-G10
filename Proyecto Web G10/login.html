@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/main-menu.css">
+    <script src="js/login.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav id="main-menu" class="activo" role="banner">
+            <a href="index.html" ><img src="images/logo-gti.png" id="logo"></a>
+            <ul>
+                <li><a href="index.html">Página principal</a></li>
+                <li><a href="contactanos.html">Contáctanos</a></li>
+                <li><a href="quienes-somos.html">Quienes somos</a></li>
+                <li><a href="#" id="pagina-actual">Iniciar Sesión</a></li>
+            </ul>
+            <div class="hamburguesa">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="datos">
+            <div class="datos2">
+                <h1>Iniciar sesión</h1>
+
+                <h3 class="subtitulo">Usuario</h3>
+
+                <input type="text" id="usuario">
+
+                <div id="errores_usuario">
+                    <p class="oculto error"  id="usu_err">Usuario erróneo</p>
+                    <p class="oculto error"  id="sin_usu">Por favor rellene este campo</p>
+                </div>
+                
+                <h3 class="subtitulo">Contraseña</h3>
+
+                <input type="password" id="contrasenya">
+
+                <div id="errores_contrasenya">
+                    <p class="oculto error"  id="contr_err">Contraseña errónea</p>
+                    <p class="oculto error"  id="sin_contr">Por favor rellene este campo</p>
+                </div>
+                
+                
+                <a href="contactanos.html" id="subrayado"><p>He olvidado mi contraseña</p></a>
+
+                <button onclick="iniciar()">Iniciar sesión</button> 
+            </div>   
+        </div>
+    </section>
+
+    <footer>
+        <p>Todos los derechos reservados GTI - 2023</p>
+    </footer>
+
+    <script src="js/main-menu.js"></script>
+    
+</body>
+</html>
