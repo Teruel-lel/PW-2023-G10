@@ -1,8 +1,4 @@
-
-
 const menu = document.getElementById("main-menu");
-
-// 移除 `activo` class
 menu.classList.remove("activo");
 
 document.querySelector(".hamburguesa").addEventListener(
@@ -18,4 +14,3 @@ document.querySelectorAll("#main-menu ul a").forEach(
         })
     }
 )
-
