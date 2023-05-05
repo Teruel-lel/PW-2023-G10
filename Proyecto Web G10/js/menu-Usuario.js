@@ -20,7 +20,7 @@ const boton= document.getElementById('cerrar-sesion');
         function redireccionar() {
             popup.close();
             popup.style.display = "none";
-            window.location.href = "login.htlm"; // Aquí colocas el nombre de archivo y extensión de la página a la que deseas redirigir
+            window.location.href = "../login.html"; // Aquí colocas el nombre de archivo y extensión de la página a la que deseas redirigir
             }
 
         enviar.addEventListener('click',redireccionar);
