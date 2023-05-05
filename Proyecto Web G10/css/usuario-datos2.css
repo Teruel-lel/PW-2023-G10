@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+*{
+    text-decoration: none;
+    color:inherit;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat';
+    background-color: var(--blanco-roto);
+    color: var(--txt-color);
+}
+:root{
+    --txt-color: #1E1E1E;
+    --verde-oscuro: #2B463C;
+    --verde-intermedio: #688F4E;
+    --verde-clarito: #B1D182;
+    --blanco-roto:#E9E8E4;
+    --blanco-recuadros: #fafafa;
+}
+/* Estilos para el header */
+header {
+    height:80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+  }
+  header a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .logo{
+    width: 140px;
+    height: 140px;
+  }
+  .logout{
+    width: 33px;
+    height: 33px;
+  }
+  
+  
+  .logout{
+    display: none;
+  }
+  
+  
+  header img:last-child {
+    margin-left: auto;
+  }
+
+h1{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+h2{
+    margin-left: 1rem;
+    margin-bottom:3rem;
+    font-size: 23px;
+    font-weight: 500;
+    
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+p{
+    font-size: 15px;
+    font-weight: 400;
+    background-color: transparent;
+}
+section{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background-color: var(--blanco-roto);
+}
+
+#contenedorNombreHuerto{
+    width: 100%;
+    height: 20vh;
+    background: var(--blanco-roto);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom:50px;
+    
+}
+#contenedorNombreHuerto h2{
+   margin-top:120px;
+    
+}
+#contenedorNombreHuerto img{
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+    margin-top:90px;
+}
+
+#contenedorAvisos{
+    width: 100%;
+    height: 10vh;
+    background: var(--blanco-roto);
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    padding-left: 2rem;
+    margin-top: -3rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#contenedorAvisos img{
+    width: 50px;
+    height: 50px;
+}
+#contenedorAvisos h3{
+    margin-left: 2rem;
+    
+}
+
+#registros{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    height: auto;
+}
+#registrosIz{
+    margin-right: 0.5rem;
+}
+
+.medicion-y-foto{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.medicion-y-foto img{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 40px;
+}
+.texto{
+    margin-left: 1rem;
+}
+
+#grafica{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+#grafica .graph{
+    width: 300px;
+    height: 300px;
+    position:absolute;
+    margin-top:200px;
+}
+
+#recuadro-botones{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.botones{
+    width: 55px;
+    height: 55px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blanco-recuadros);
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+}
+.botones img{
+    width: 45px;
+    height: 45px;
+}
+footer{
+    margin-top: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco-roto);
+}
+
+@media screen and (min-width: 950px) {
+    section{
+        height: 100vh;
+    }
+    #informacion-general{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #registros{
+        height: 50vh;
+    }
+    #grafica{
+        margin-top: -1rem;
+        height: 70vh;
+    }
+    #grafica .graph{
+        margin-top:6rem;
+    }
+    #resgistrosIz{
+        margin-right: 3rem;
+    }
+    .medicion-y-foto{
+        margin-top: 2rem;
+        
+    }
+
+    
+}
+@media only screen and (max-width: 600px) {
+    /* Ajustar posición de imagen de logout */
+    header img:last-child {
+    margin-left: 0;
+    margin-right: 20px;
+    }
+    .logout-link {
+    display: inline-block;
+    background-image: url('../images/LogOutBueno.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 33px;
+    height: 33px;
+    text-indent: -9999px;
+    margin-top: 10px; /* Agregar un margen superior para separar los botones del logo */
+    margin-left: auto; /* Mover los botones al lado derecho */
+    margin-right: 0;
+    }
+}

@@ -33,16 +33,16 @@ p{
  
 section{
     width: 100%;
-    height: 100vh;
+    height: auto;
     flex-direction: column;
     background-color: var(--blanco-roto);
 }
 #contenedorTextoAdmin{
     width: 100%;
-    height: 10vh;
+    height: 15vh;
     background: var(--blanco-roto);
     display: flex;
-    align-items: center;
+    align-items: end;
     padding-left: 5vh;
 }
 
@@ -190,7 +190,7 @@ section{
     color: var(--txt-color);
     text-align: left;
 }
-#botones-popUp{
+.botones-popUp{
     margin-top: 4rem;
     display: flex;
     justify-content: space-between;

@@ -56,7 +56,7 @@ section{
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.35);
 }
 #texto-personales{
-    border: 1px solid black;
+    border: 2px solid red;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -136,19 +136,6 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
-    background-color: var(--blanco-recuadros);
-    border-radius: 30px;
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.35);
-}
-.contenedor-campos2{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 5vh;
-    margin-right: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 80px;
     background-color: var(--blanco-recuadros);
     border-radius: 30px;

@@ -34,7 +34,8 @@ h2{
 
 h3{
     margin-top: 2vh;
-    font-size: 20px;
+    margin-bottom: 0.5rem;
+    font-size: 15px;
     text-decoration: none;
     font-weight: normal;
 }
@@ -114,6 +115,50 @@ footer{
     color: var(--blanco-roto);
 }
 
+.PopUp{
+    margin: auto;
+    border: none;
+    border-radius: 30px;
+    padding: 0px 20px;
+    width: 300px;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#enviar{
+    height: 40px;
+    width: 140px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background-color: #2B463C;
+    margin-top: 3px;
+    align-self: flex-end;
+}
+
+
+@media(min-width:1100px){
+    
+    #contenedor{
+        left: 35%;
+    }
+}
+@media(min-width:1450px){
+    
+    #contenedor{
+        left: 38%;
+    }
+    .PopUp{
+        padding: 0px 20px;
+        width: 486px;
+        height: 180px;
+    }
+}
+
+
+
+
 @media screen and (min-width: 800px) {
     section{
         display: flex;
@@ -141,10 +186,11 @@ footer{
             font-size: 30px;
         }
         h3{
-            font-size: 20px;
+            font-size: 17px;
         }
         p{
             font-size: 17px;
         }
+
     }
 }

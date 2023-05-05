@@ -1,3 +1,4 @@
+
 #main-menu{
     --bg-color: var(--blanco-roto);
     --txt2-color: var(--txt-color);
@@ -9,8 +10,15 @@
 #pagina-actual{
     color: var(--verde-intermedio);
 }
+#logo{
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    width: 115px;
+    height: 115px;
+}
 #main-menu ul{
-   
     background-color: var(--bg-color);
     position: absolute;
     top: var(--menu-height);
@@ -18,20 +26,23 @@
     width: 100%;
     transform: translateY(-50%) scaleY(0);
     transition: .5s;
+    
 }
 
 #main-menu.activo ul{
     transform: translateY(0) scaleY(1);
 }
-
 #main-menu li{
-    padding: .5em;
     margin-bottom: 1rem;
+    padding: .5em;
     text-align: center;
+   
+}
+#main-menu li:hover{
+    color: var(--verde-intermedio);
 }
 
 #main-menu{
-    margin-top: 0;
     background-color: var(--bg-color);
     color: var(--txt-color);
     height: var(--menu-height);
@@ -41,9 +52,13 @@
     padding: .5em;
     width: 100%;
     position: fixed;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 .hamburguesa{
+    cursor: pointer;
+    margin-right: 2rem;
     width: 2em;
     height: 2em;
 }
@@ -51,9 +66,9 @@
 .hamburguesa div{
     background-color: var(--txt-color);
     width: 2em;
-    border-radius: 10px;
     height: .3em;
     margin: .3em auto;
+    border-radius: 7px;
     transition: .5s;
 }
 
@@ -66,24 +81,29 @@
 #main-menu.activo .hamburguesa div:nth-child(3){
     transform: translateY(-.6em) rotate(-45deg);
 }
-/*
-@media screen and (min-width: 900px) {
-    #logo{
-        z-index: 1;
-    }
+@media screen and (min-width: 1000px) {
     #main-menu ul {
-        top: 1vh;
+        background: transparent;
+        top: 0;
         display: flex;
+        flex-direction: row;
+        align-items: center;
         justify-content: flex-end;
-        z-index: 0;
+        transform: none;
+        transition: none;
+        height: 100%;
     }
+
     #main-menu li {
-        margin-top: 0;
         margin-bottom: 0;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 0;
+        opacity: 1;
+        transform: none;
     }
-    .hamburguesa{
-        opacity: 0;
+
+    .hamburguesa {
+        display: none;
     }
-  }*/
+}
