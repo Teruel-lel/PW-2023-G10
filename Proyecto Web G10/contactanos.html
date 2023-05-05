@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
-    <link rel="stylesheet" href="/css/contactanos.css">
-    <link rel="stylesheet" href="/css/main-menu.css">
+    <link rel="stylesheet" href="css/contactanos.css">
+    <link rel="stylesheet" href="css/main-menu.css">
 </head>
 <body>
 
@@ -67,39 +67,7 @@
     </footer>
     
     <script src="js/main-menu.js"></script>
-    <script>
+    <script src="js/contactanos.js"></script>
 
-        document.querySelector("form").addEventListener('submit',(event)=>{
-            
-            const input = document.getElementById("nombre")
-                if(input.value.length > 20 || input.value.length < 6 ){
-                    
-                    event.preventDefault();
-                    input.setCustomValidity("Deben ser más de 6 y menos de 20 caracteres");
-                    input.reportValidity()
-                    
-                }else{
-                    popup.showModal();
-                }
-            }
-        )
-            
-        document.getElementById("nombre").addEventListener("keydown",
-            (event) => {
-            console.log(event.target);
-            event.target.setCustomValidity("");
-            event.target.reportValidity();
-        })
-
-        const boton= document.getElementById('boton-enviar');
-        const enviar= document.getElementById('enviar');
-        const popup = document.querySelector("dialog");
-
-        function cerrar(){
-            popup.close();
-        }
-
-        enviar.addEventListener('click',cerrar);
-    </script>
 </body>
 </html>

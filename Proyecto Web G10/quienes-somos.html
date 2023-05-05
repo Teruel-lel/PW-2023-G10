@@ -1,80 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quienes somos</title>
     <link rel="stylesheet" href="css/quienes-somos.css">
-    
-    
+    <link rel="stylesheet" href="css/main-menu.css">
 </head>
 <body>
 
-        <nav id="pc" class="activo">
-            <a href="landing.html"><img src="images/normal_logo_u30.png" id="logo"></a>
-            <div id="quienes-somos">
-               <a href="quienes-somos.html">Quiénes Somos</a>
-            </div>
-            <div id="contactanos">
-               <a href="contactanos.html">Contáctanos</a>
-            </div>
-            <div id="iniciar">
-               <a href="login.html">Iniciar Sesión</a>
-            </div>
-          
-           
-            
-        </nav>
-    
-    
-  
-        <nav id="main-menu" class="activo">
-            <a href="landing.html"><img src="images/logoverde.png" id="logo"></a>
+    <header>
+        <nav id="main-menu" class="activo" role="banner">
+            <a href="index.html" ><img src="images/logo-gti.png" id="logo"></a>
             <ul>
-                <li><a href="landing.html">página principal</a></li>
-                <li><a href="login.html">Iniciar Sesión</a></li>
-                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="index.html" >Página principal</a></li>
                 <li><a href="contactanos.html">Contáctanos</a></li>
-                 
-                <li id="mansi"></li>
-               </ul>
+                <li><a href="#" id="pagina-actual">Quienes somos</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
             <div class="hamburguesa">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
         </nav>
-  
+    </header>
     
-    <script src="js/main-menu.js"></script>
-    
-<div id="sec">
- <div id="wenzi">
-<p>
-    <h2>¿Quiénes somos?</h2><br/><br/>
-    <b>GTI</b> es una nueva empresa emergente destinada a la 
-        comercialización de <b>huertos hidropónicos</b> con sensores 
-        para el monitoreo y el control de los <b>cultivos y plantas</b> 
-        que se puedan aprovecharse de este sistema.<br/><br/><br/>
-    <h3>Filosofía</h3><br/><br/>
-    La filosofía de la empresa se basa en la <b>orientación a resultados</b>. 
-        Gracias a la eficacia y a establecer objetivos claros, 
-        conseguimos desarrollar un <b>producto competitivo</b>.<br/><br/><br/>
-    <h3>Metas</h3><br/><br/>
-    Nuestras principales metas son el <b>crecimiento del mercado</b>, 
-        la adquisición de clientes, la innovación de productos y la rentabilidad financiera, 
-        además de promover un <b>producto sostenible</b> al medio ambiente.</p>
-    </div>   
+    <section>
+        <div id="textos-informativos">
+            <h2>¿Quiénes somos?</h2>
+            <p><b>GTI</b>es una nueva empresa emegente destinnada a la comercialización de <b>huertos hidropónicos</b> con sensores para el monitoreo y el control de los <b>cultivos y plantas</b> que se puedan parovechar de este sistema.</p>
+            
+            <h3>Filosofía</h3>
+            <p>La filosofía de la empresa se basa en la <b>orientación a resultados.</b> Gracias a la eficacia y a establecer objetivos claros, conseguimos desarrollar un <b>producto competitivo.</b></p>
 
-        <img src="images/normal_u25.png" id="normal_mo" alt="quienes somos">
-        <div id="foot">
-            Todos los derechos reservador -GTI 2023
+            <h3>Metas</h3>
+            <p>Nuestras principales metas son el <b>crecimiento del mercado,</b> la adquisición de clientes, la innovación de productos y la rentabilidad financiera, además de promover un <b>producto sostenible</b> al medio ambiente.</p>
         </div>
-    </div>
-
-    
-
-    
+        <img src="images/quienes-somos.svg" alt="quienes somos">
+    </section>
+    <footer>
+        <p>Todos los derechos reservados GTI - 2023</p>
+    </footer>
+    <script src="js/main-menu.js"></script>
 </body>
 </html>
