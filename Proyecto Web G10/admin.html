@@ -12,6 +12,7 @@
 </head>
 <body>
     <section>
+        <!-- -------------------------------------------HEADER------------------------------------------------------ -->
         <header id="main-menu">
             <img src="images/logo-gti.png" id="logo">
             <h3 id="cerrar-sesion">Cerrar sesión</h3>
@@ -26,9 +27,7 @@
         </dialog>
         <script src="js/menu-Usuario.js"></script>
 
-
-
-
+        <!-- ------------------------------------------- ADMIN ------------------------------------------------------ -->
 
         <div id="contenedorTextoAdmin">
             <h2>Administrador</h2>
@@ -52,6 +51,8 @@
             <p id="textoPaginas"></p>
             <img id="siguiente" onclick="cambiarPagina('siguiente')" alt="siguiente" src="images/icono-flecha-der.svg">
         </div>
+
+        <!-- -------------------------------------------POP UPS------------------------------------------------------ -->
 
         <dialog id="popupNuevoUsuario">
             <form onsubmit="crearNuevoUsuario()">
@@ -78,6 +79,8 @@
             </form>
         </dialog>
     </section>
+
+    <!-- -------------------------------------------FOOTER------------------------------------------------------ -->
     
     <footer>
         <p>Todos los derechos reservados GTI - 2023</p>
