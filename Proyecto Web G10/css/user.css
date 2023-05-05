@@ -1,20 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
-
 *{
-    text-decoration: none;
-    color:inherit; 
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  text-decoration: none;
+  color:inherit; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
+:root{
+  --txt-color: #1E1E1E;
+  --verde-oscuro: #2B463C;
+  --verde-intermedio: #688F4E;
+  --verde-clarito: #B1D182;
+  --blanco-roto:#E9E8E4;
+  --blanco-recuadros: #fafafa;
+}
+html{
+  scroll-behavior: smooth;
+}
 body{
-    font-family: 'Montserrat';
-    background-color: var(--blanco-roto);
-    color: var(--txt-color);
+  font-family: 'Montserrat';
+  background-color: var(--blanco-roto);
+  color: var(--txt-color);
 }
+
+
 /* Estilos para el header */
+
+
 header {
   height:80px;
   display: flex;
@@ -42,11 +55,11 @@ header a {
 .logout{
   display: none;
 }
-
-
 header img:last-child {
   margin-left: auto;
 }
+
+
 h3{
     font-size: 18px;
     text-decoration: none;
@@ -58,26 +71,26 @@ h2{
     font-weight: medium;
 }
    /* Estilos para la sección Huertos */
-   .Huertos {
-      background-color: #E9E8E4;
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Cambiado de "flex-start" a "center" */
-      justify-content: center;
-      height: 68vh;
-      padding: 20px;
-    }
+.Huertos {
+  background-color: var(--blanco-roto);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Cambiado de "flex-start" a "center" */
+  justify-content: center;
+  height: 68vh;
+  padding: 20px;
+}
   
-    .Título {
-      height: 22vh;
-      display: flex;
-      align-items: end; /* Centrar título en el subheader */
-      text-align: start;
-      background-color: #E9E8E4;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-      border:1px solid gray;
+  .Título {
+    height: 22vh;
+    display: flex;
+    align-items: end; /* Centrar título en el subheader */
+    text-align: start;
+    background-color: var(--blanco-roto);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    border:1px solid gray;
       
-    }
+  }
   
     .Título h2 {
       font-size: 30px;
@@ -85,10 +98,7 @@ h2{
       margin-bottom:20px;
       display:flex;
       
-     
-      
-   
-      
+
     }
   
   /* Estilos para los botones */
@@ -105,8 +115,8 @@ h2{
     width: 600px;
     height: 80px;
     border: none;
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: var(--blanco-recuadros);
+    color: var(--txt-color);
     font-family: 'Montserrat Medium', sans-serif;
     font-size: 24px;
     padding: 20px;
@@ -131,14 +141,14 @@ h2{
   
   button:hover {
     cursor: pointer;
-    background-color: #C5CFDB;
+    background-color: var(--verde-clarito);
   }
   
   /* Estilos para el footer */
   
   footer {
-    background-color: #2B463C;
-    color: #FFFFFF;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco-recuadros);
     text-align: center;
     padding: 20px;
     height:100%;
