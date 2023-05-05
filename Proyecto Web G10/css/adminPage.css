@@ -48,8 +48,7 @@ section{
 
 #contenedorBarraBusqueda{
     height: 50px;
-    margin-left: 5vh;
-    margin-right: 5vh;
+    margin: 0 5vh;
     padding: 7px 7px 7px 7px;
     background: var(--blanco-recuadros);
     display: flex;
@@ -96,9 +95,8 @@ section{
 
 .contenedor-usuarios{
     cursor: pointer;
+    margin:0 5vh;
     margin-bottom: 1rem;
-    margin-left: 5vh;
-    margin-right: 5vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -123,16 +121,14 @@ section{
 
 
 #paginas{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 #paginas p{
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin: 0 2rem;
 }
 #paginas img{
     cursor: pointer;
@@ -140,8 +136,7 @@ section{
     height: 40px;
 }
 .bc{
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin: 0 2rem;
     width: 60px;
     height: 60px;
 }
@@ -172,7 +167,6 @@ section{
     background-color:var(--blanco-recuadros);
     box-sizing: border-box;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.35);
-    font-family: "Montserrat", sans-serif;
     color: var(--txt-color);
     text-align: left;
 }
@@ -186,7 +180,6 @@ section{
     background-color:var(--blanco-recuadros);
     box-sizing: border-box;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.35);
-    font-family: "Montserrat", sans-serif;
     color: var(--txt-color);
     text-align: left;
 }
