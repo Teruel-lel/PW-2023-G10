@@ -1,3 +1,9 @@
+//----------------------------------------------------------------------------------------------------------------------------------------
+//
+// CARRUSEL 
+//
+//----------------------------------------------------------------------------------------------------------------------------------------
+
 function App(){}
 
     window.onload = function(event){
@@ -32,18 +38,24 @@ function App(){}
         }
     }
 
-    window.onscroll= function(){
-        if(document.documentElement.scrollTop >100){
-            document.querySelector('.contenedor-go-top')
-            .classList.add('show');
-        }else{
-            document.querySelector('.contenedor-go-top')
-            .classList.remove('show');
-        }
+//----------------------------------------------------------------------------------------------------------------------------------------
+//
+// FLECHA
+//
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+window.onscroll= function(){
+    if(document.documentElement.scrollTop >170){
+        document.querySelector('.contenedor-go-top')
+        .classList.add('show');
+    }else{
+        document.querySelector('.contenedor-go-top')
+        .classList.remove('show');
     }
-    document.querySelector('.contenedor-go-top').addEventListener('click',()=>{
-        window.scrollTo({
-            top:0,
-            behavior:'smooth'
-        });
+}
+document.querySelector('.contenedor-go-top').addEventListener('click',()=>{
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
     });
+});
