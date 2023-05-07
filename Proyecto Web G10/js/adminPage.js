@@ -20,7 +20,7 @@ popupEliminar.style.display="none";
 
 (async () => {
     if(localStorage.getItem("usuarios") === null){
-        const respuesta = await fetch('testeo.json');
+        const respuesta = await fetch('json/usuarios.json');
         usuarios = await respuesta.json();
     }
     else{
@@ -205,7 +205,7 @@ function aceptarEliminar(){
 
 
 function redireccion(){
-    location.href ="landing.html";
+    location.href ="adminEditar.html";
 }
 
 function buscarUsuario(){
