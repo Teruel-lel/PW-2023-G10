@@ -11,12 +11,10 @@
     <title>Usuario</title>
 </head>
 <body>
-
     <header id="main-menu">
-        <a href="#"><img class=logo src="images/logo-gti.png" alt="Logo página"></a>
-
-        <a id="cerrar-sesion" href="#" class="logout-link"><img class="logout" src="images/LogOutBueno.svg" alt="Logout"><h3>Cerrar sesión</h3></a>
-     </header>
+        <img src="images/logo-gti.png" id="logo">
+        <h3 id="cerrar-sesion">Cerrar sesión</h3>
+    </header>
 
     <dialog id="popUp-cerrar-sesion">
         <h3>¿Deseas cerrar sesión?</h3>
@@ -25,6 +23,7 @@
             <button id="cancelar-logout">Cancelar</button>
         </div>
     </dialog>
+    <script src="js/menu-Usuario.js"></script>
     
 
     <div class="contenedor">
@@ -33,19 +32,19 @@
             <h2>¡Hola usuario!</h2>
         </div>
         <div class="Huertos">
-            <div class="Botones">
-            <div class="Tomates">
-                <a href="usuario-datos.html"><button><img src="images/PeligroMASROJO.svg" alt="Peligro"><div class="Ajustar">Tomates</div></button></a>
-            </div>
-            <div class="Girasoles">
-                <a href="usuario-datos2.html"><button><img src="images/icono-correcto.svg" alt="Peligro"><div class="Ajustar">Girasoles</div></button></a>
-            </div>
+            <div class="Contenedor-Botones">
+                <div class="Tomates">
+                    <a href="usuario-datos2.html"><button class="huertos-usuario"><img src="images/PeligroMASROJO.svg" alt="Peligro"><div class="Ajustar">Tomates</div></button></a>
+                </div>
+                <div class="Girasoles">
+                    <a href="usuario-datos2.html"><button class="huertos-usuario"><img src="images/icono-correcto.svg" alt="Peligro"><div class="Ajustar">Girasoles</div></button></a>
+                </div>
             </div>
         </div>
-      <footer>
-          <p>Todos los derechos reservados - GTI 2023</p>
-      </footer>
-    </div>  
+    </div> 
+    <footer>
+        <p>Todos los derechos reservados - GTI 2023</p>
+    </footer> 
     <script src="js/menu-Usuario.js"></script>
 </body>
 </html>
