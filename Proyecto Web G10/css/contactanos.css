@@ -92,7 +92,7 @@ section{
 select:hover, #boton-enviar:hover{
     cursor: pointer;
 }
-img{
+#planta{
     position: absolute;
     bottom: 0;
     right: 0;
@@ -168,7 +168,7 @@ footer{
     #contenedor-recuadros{
         margin-left: 10vh;
     }
-    img{
+    #planta{
         right: 3vh;
         width: 400px;
         height: 400px;
@@ -177,7 +177,7 @@ footer{
         #contenedor-recuadros{
             margin-left: 30vh;
         }
-        img{
+        #planta{
             right: 12vh;
             width: 500px;
             height: 500px;

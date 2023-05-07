@@ -27,7 +27,7 @@ section{
     background-color: #E9E8E6;
     background-repeat: no-repeat;
     background-position-x: -250px;
-    background-position-y: 300px;
+    background-position-y: bottom;
 }
 h1{
     margin-top: 5rem;

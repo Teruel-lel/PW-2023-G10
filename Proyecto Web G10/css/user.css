@@ -24,42 +24,6 @@ body{
   color: var(--txt-color);
 }
 
-
-/* Estilos para el header */
-
-
-header {
-  height:80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  border-bottom: 1px solid gray;
-  padding: 20px;
-}
-header a {
-  color: black;
-  text-decoration: none;
-}
-
-.logo{
-  width: 140px;
-  height: 140px;
-}
-.logout{
-  width: 33px;
-  height: 33px;
-}
-
-
-.logout{
-  display: none;
-}
-header img:last-child {
-  margin-left: auto;
-}
-
-
 h3{
     font-size: 18px;
     text-decoration: none;
@@ -75,14 +39,14 @@ h2{
   background-color: var(--blanco-roto);
   display: flex;
   flex-direction: column;
-  align-items: center; /* Cambiado de "flex-start" a "center" */
+  align-items: end; /* Cambiado de "flex-start" a "center" */
   justify-content: center;
   height: 68vh;
   padding: 20px;
 }
   
-  .Título {
-    height: 22vh;
+.Título {
+    height: 16vh;
     display: flex;
     align-items: end; /* Centrar título en el subheader */
     text-align: start;
@@ -90,19 +54,18 @@ h2{
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     border:1px solid gray;
       
-  }
+}
   
-    .Título h2 {
-      font-size: 30px;
-      margin-left: 170px;
-      margin-bottom:20px;
-      display:flex;
-      
-
-    }
+.Título h2 {
+  margin-left: 2rem;
+  font-size: 30px;
+  margin-bottom:20px;
+  display:flex;
+}
   
   /* Estilos para los botones */
-  .Botones {
+  .Contenedor-Botones {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,7 +74,7 @@ h2{
     text-align: center;
   }
   
-  button {
+  .huertos-usuario {
     width: 600px;
     height: 80px;
     border: none;
@@ -128,7 +91,7 @@ h2{
     
   }
   
-  button img {
+  .huertos-usuario img {
     margin-right:200px; /* Ajustar el espacio entre la imagen y el texto */
     width: 50px;
     height: 50px;
@@ -139,7 +102,7 @@ h2{
     margin-right: 200px;
   }
   
-  button:hover {
+  .huertos-usuario:hover {
     cursor: pointer;
     background-color: var(--verde-clarito);
   }
@@ -147,6 +110,7 @@ h2{
   /* Estilos para el footer */
   
   footer {
+    margin-top: 3rem;
     background-color: var(--verde-oscuro);
     color: var(--blanco-recuadros);
     text-align: center;
@@ -157,47 +121,29 @@ h2{
   /* Estilos para móvil */
   @media only screen and (max-width: 600px) {
   
-  
-  /* Ajustar posición de imagen de logout */
-  header img:last-child {
-    margin-left: 0;
-    margin-right: 20px;
-    
-  }
-  .logout-link {
-      display: inline-block;
-      background-image: url('../images/LogOutBueno.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      width: 33px;
-      height: 33px;
-      text-indent: -9999px;
-    }
   /* Ajustar título */
     .Título {
+      height: 14vh;
       display: flex;
-      justify-content: center;
+      justify-content: start;
       text-align: center;
     }
   
     .Título h2 {
       margin-bottom:20px;
-      margin-right:110px;
+      margin-left:2rem;
     }
   /* Ajustar tamaño de botones */
-  button {
+  .huertos-usuario {
     max-width: 400px;
   }
-  button img {
+  .huertos-usuario img {
     margin-right:100px; /* Ajustar el espacio entre la imagen y el texto */
-    
-    
+
   }
   .Ajustar {
-   
+
     margin-right: 100px;
   }
-  
   
   }

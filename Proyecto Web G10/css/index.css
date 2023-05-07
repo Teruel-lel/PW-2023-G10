@@ -107,7 +107,7 @@ p{
 }
 
 .introduccion{
-    background-image: url('/images/fondo-landing-v2.png');
+    background-image: url('../images/fondo-landing-v2.png');
     background-color: #D9DED8 ;
     background-size: cover;
     background-position: -500px 70px;
