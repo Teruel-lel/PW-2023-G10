@@ -88,12 +88,14 @@ section{
     font-family: 'Montserrat';
     font-size: 15px;
     border: none;
+    margin-left: auto;
 }
 select:hover, #boton-enviar:hover{
     cursor: pointer;
 }
 #planta{
-    position: absolute;
+    margin-top: 5px;
+    margin-left: 150px;
     bottom: 0;
     right: 0;
     width: 175px;
@@ -113,6 +115,7 @@ footer{
     justify-content: center;
     background-color: var(--verde-oscuro);
     color: var(--blanco-roto);
+    margin-top: 100px;
 }
 
 .PopUp{
