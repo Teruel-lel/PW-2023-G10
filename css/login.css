@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+*{
+    text-decoration: none;
+    color:inherit; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat';
+    background-color: var(--blanco-roto);
+    color: var(--txt-color);
+}
+
+:root{
+    --txt-color: #1E1E1E;
+    --verde-oscuro: #2B463C;
+    --verde-intermedio: #688F4E;
+    --verde-clarito: #B1D182;
+    --blanco-roto:#E9E8E4;
+    --blanco-recuadros: #fafafa;
+}
+section{
+    background-image: url("../images/Planta_login.png");
+    background-color: #E9E8E6;
+    background-repeat: no-repeat;
+    background-position-x: -250px;
+    background-position-y: bottom;
+}
+h1{
+    margin-top: 5rem;
+    font-size: 30px;
+    font-weight: medium;
+}
+h3{
+    margin-top: 2rem;
+    font-size: 18px;
+    font-weight: normal;
+}
+p{
+    font-size: 17px;
+    font-weight: normal; 
+}
+#subrayado{
+    text-decoration: underline;
+    color: black;
+    color: var(--verde-oscuro);
+}
+.datos{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.datos2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+input{
+    width: 300px;
+    height: 40px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+}
+
+.error{
+    font-size: 17px;
+    color: red;
+}
+
+.oculto{
+    display: none;
+}
+
+#errores_usuario{
+    height: 56px;
+    padding: 0px;
+}
+
+#errores_contrasenya{
+    height: 53px;
+    padding: 0px;
+}
+
+button{
+    cursor: pointer;
+    height: 56px;
+    width: 168px;
+    font-size: 17px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background-color:var(--verde-oscuro);
+    margin-top: 6vh;
+    align-self: flex-end;
+}
+   
+footer{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco-roto);
+}
+@media screen and (min-width:1000px){
+    section{
+        background-size: 50%;
+        background-position-x: left;
+        background-position-y: bottom;
+    }
+    .datos{
+        height: 100vh;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .datos2{
+        margin-right: 15vw;
+    }
+    .subtitulo{
+        margin-left: 37px;
+    }
+
+    #errores_usuario{
+        margin-left: 37px;
+    }
+
+    #errores_contrasenya{
+        margin-left: 37px;
+    }
+
+    #subrayado{
+        margin-left: 37px;
+    }
+
+    input{
+        margin-left: 37px;
+    }
+}
